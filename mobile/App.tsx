@@ -10,7 +10,7 @@ import {
   BaiJamjuree_700Bold
 } from '@expo-google-fonts/bai-jamjuree'
 
-import blurBg from '.src/assets/bg-blur.png'
+import blurBg from './src/assets/bg-blur.png'
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
