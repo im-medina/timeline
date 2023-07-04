@@ -53,10 +53,10 @@ const [, response, signInWithGithub] = useAuthRequest(
 async function handleGithubOauthCode(code:string){
   const response = await api
   .post('/register',{
-    code,                                               //enviando o code no corpo da requisição
+    code,
    })
-   const { token } = response.data                   //dentro dessa resposta obtemos o token
-   await SecureStore.setItemAsync('token',token)           //salva o token no storage do celular pelo secure storage
+   const { token } = response.data
+   await SecureStore.setItemAsync('token',token)
 
    router.push('/memories')
 }
