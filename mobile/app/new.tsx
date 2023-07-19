@@ -48,7 +48,7 @@ export default function newMemory(){
         multiline
         className="p-0 font-body text-lg text-gray-50"
         placeholderTextColor="#56565a"
-        placeholder="Fique livre para adicoinar fotos, vídeos e relatos sobre essa experiência que você quer lembrar para sempre"
+        placeholder="Fique livre para adicionar fotos, vídeos e relatos sobre essa experiência que você quer lembrar para sempre"
         />
         <TouchableOpacity 
           activeOpacity={0.7} 
