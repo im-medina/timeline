@@ -4,8 +4,11 @@ import { MediaPicker } from './MediaPicker'
 import { FormEvent } from 'react'
 import { api } from '@/lib/api'
 import Cookie from 'js-cookie'
+import { useRouter } from 'next/navigation'
 
 export function NewMemoryForm() {
+  const router = useRouter()
+
   async function handleCreateMemory(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
@@ -31,7 +34,7 @@ export function NewMemoryForm() {
       '/memories',
       {
         coverUrl,
-        content: formData.get('isPublic'),
+        content: formData.get('content'),
         isPublic: formData.get('isPublic'),
       },
       {
@@ -40,6 +43,8 @@ export function NewMemoryForm() {
         },
       },
     )
+
+    router.push('/')
   }
   return (
     <form onSubmit={handleCreateMemory} className="flex flex-1 flex-col gap-2">
