@@ -1,2 +1,2 @@
 # timeline
-Timeline made with React, Next, Tailwind, Typescript e etc
+Timeline made with React, Next, Tailwind, Typescript and more.
